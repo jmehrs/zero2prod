@@ -1,7 +1,7 @@
-use std::net::TcpListener;
-use sqlx::PgPool;
-use actix_web::{web, App, HttpServer};
 use actix_web::dev::Server;
+use actix_web::{web, App, HttpServer};
+use sqlx::PgPool;
+use std::net::TcpListener;
 
 use crate::routes::{health_check, subscribe};
 
@@ -18,5 +18,5 @@ pub fn run(listener: TcpListener, db_pool: PgPool) -> std::io::Result<Server> {
     })
     .listen(listener)?
     .run();
-     Ok(server)
+    Ok(server)
 }
