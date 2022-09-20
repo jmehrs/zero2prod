@@ -65,7 +65,6 @@ pub async fn insert_subscriber(
     Ok(())
 }
 
-
 pub fn is_valid_name(s: &str) -> bool {
     // `.trim()` returns a view over the input `s` without trailing
     // whitespace-like characters.
